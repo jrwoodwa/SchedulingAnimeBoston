@@ -12,7 +12,7 @@ Solves schedule as an assignment problem via LP
 - ✅ Completed the web scraping in a notebook that captures the data, processes it (including subevents like Maid Cafe going into 45-min block options), and tidies it. 
 
 🔜 What's next:
-- ☐ Need to write a `webscrape.py` script for translating data engineering into a CSV.
+- ☐ Need to write a `webscrape.py` script for translating data engineering into a CSV (should state when data was queried).
 - ☐ After the CSV is fully ready, manually utility score the information.
 - ☐ With the data prepped, write the LP model.
 - ☐ After the LP model is defined, then write the code.
