@@ -72,7 +72,7 @@ def fetch_schedule_data(url):
     df_categories['Data Value'] = df_categories['Data Value'].astype(int)
     # fix missing accent in category name
     df_categories['Category'] = df_categories['Category'].replace("Maid Cafe", "Maid Café")
-    
+
     # ------- if we don't have anything for information
     df_categories['Utility'] = 0
     df_categories.to_csv('Event_Categories.csv', index=False, encoding='utf-8-sig')
@@ -112,7 +112,7 @@ def process_event_table(url, all_events_df, table = 0):
 
 # --- main pipeline ---
 def main():
-    url = "https://www.animeboston.com/schedule/index/2024"
+    url = "https://www.animeboston.com/schedule/index/2025"
 
     all_events_df, category_colors_df = fetch_schedule_data(url)
 
@@ -130,8 +130,30 @@ def main():
             "Room Clear", "Seating", "ID Check Seating (18+)"
         ]
         df_filtered = final_df[~final_df["Event"].isin(exclude_from_scheduling)].reset_index(drop=True)
+
+        # convert unhashable list-type columns to strings
+        # drop duplicate times
+        time_df = df_filtered[['Event', 'Room', 'TimeSlot']]
+        
+        # drop TimeSlot column
+        df_notslot = df_filtered.drop(columns=['TimeSlot'])
+        
+        # group without slot
+        df_grouped = df_notslot.groupby(['Event', 'Room'], as_index=False).agg({
+            'Category': lambda x: '|'.join(sorted(set(x))),
+            'Color': lambda x: '|'.join(sorted(set(x)))
+        })
+
+        df_grouped = df_grouped.drop_duplicates()
+        
+        # final merge result
+        df_final = pd.merge(df_grouped, time_df, on=['Event', 'Room'], how='inner')
+
+        df_final['TimeSlot']= df_final['TimeSlot'].astype(str)
+
+        df_final = df_final.drop_duplicates()
     
-        df_filtered.to_csv(f'AnimeBoston_day{ii}_schedule.csv', index=False, encoding='utf-8-sig')
+        df_final.to_csv(f'AnimeBoston_day{ii}_schedule.csv', index=False, encoding='utf-8-sig')
 
 
 # --- run the main function ---

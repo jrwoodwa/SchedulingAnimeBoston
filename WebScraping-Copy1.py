@@ -8,15 +8,14 @@ import requests
 
 # --- clean html tables ---
 def preprocess_tables(tables, ii, FirstColumnName='TimeSlot'):
-    table_df = tables[ii]
-    table_df.dropna(subset=[table_df.columns[0]], inplace=True)
-    table_df = table_df.iloc[:, :-1].copy()
-    table_df.columns = [FirstColumnName] + table_df.columns[1:].tolist()
+    tables[ii].dropna(subset=[tables[ii].columns[0]], inplace=True)
+    tables[ii] = tables[ii].iloc[:, :-1].copy()
+    tables[ii].columns = [FirstColumnName] + tables[ii].columns[1:].tolist()
 
     # convert to 24-hr format
     vconvert = np.vectorize(lambda x: datetime.strptime(x, '%I:%M %p').strftime('%H:%M'))
-    table_df[FirstColumnName] = vconvert(table_df[FirstColumnName])
-    return table_df
+    tables[ii][FirstColumnName] = vconvert(tables[ii][FirstColumnName])
+    return tables[ii]
 
 
 # --- chunk events like Maid Cafe ---
@@ -42,20 +41,19 @@ def fetch_schedule_data(url):
     soup = BeautifulSoup(requests.get(url).text, 'html.parser')
 
     events = []
-    events = [
-        {
-            "category_number": td.get("class")[1].split('-')[-1],
-            "title": td.get("title"),
-            "title_table": td.get_text(strip=True)
-        }
-        for td in soup.select("td.schedule-event")
-    ]
-
+    for td in soup.select("td.schedule-event"):
+        category_number = td.get("class")[1].split('-')[-1]
+        title = td.get("title")
+        description = td.get_text(strip=True)
+        events.append({
+            "category_number": category_number,
+            "title": title,
+            "title_table": description
+        })
 
     df_events = pd.DataFrame(events).drop_duplicates().sort_values(by='title')
-    df_events['title'] = df_events['title'].replace("", np.nan).fillna(df_events['title_table']).str.strip()
-
-    
+    df_events['title'] = df_events['title'].replace("", np.nan)
+    df_events['title'] = df_events['title'].fillna(df_events['title_table'])
     df_events['category_number'] = df_events['category_number'].astype(int)
 
     legend_items = soup.select("div.schedule-legend label.schedule-category-label")
@@ -72,7 +70,7 @@ def fetch_schedule_data(url):
     df_categories['Data Value'] = df_categories['Data Value'].astype(int)
     # fix missing accent in category name
     df_categories['Category'] = df_categories['Category'].replace("Maid Cafe", "Maid Café")
-
+    
     # ------- if we don't have anything for information
     df_categories['Utility'] = 0
     df_categories.to_csv('Event_Categories.csv', index=False, encoding='utf-8-sig')
@@ -112,7 +110,7 @@ def process_event_table(url, all_events_df, table = 0):
 
 # --- main pipeline ---
 def main():
-    url = "https://www.animeboston.com/schedule/index/2025"
+    url = "https://www.animeboston.com/schedule/index/2024"
 
     all_events_df, category_colors_df = fetch_schedule_data(url)
 
@@ -130,30 +128,8 @@ def main():
             "Room Clear", "Seating", "ID Check Seating (18+)"
         ]
         df_filtered = final_df[~final_df["Event"].isin(exclude_from_scheduling)].reset_index(drop=True)
-
-        # convert unhashable list-type columns to strings
-        # drop duplicate times
-        time_df = df_filtered[['Event', 'Room', 'TimeSlot']]
-        
-        # drop TimeSlot column
-        df_notslot = df_filtered.drop(columns=['TimeSlot'])
-        
-        # group without slot
-        df_grouped = df_notslot.groupby(['Event', 'Room'], as_index=False).agg({
-            'Category': lambda x: '|'.join(sorted(set(x))),
-            'Color': lambda x: '|'.join(sorted(set(x)))
-        })
-
-        df_grouped = df_grouped.drop_duplicates()
-        
-        # final merge result
-        df_final = pd.merge(df_grouped, time_df, on=['Event', 'Room'], how='inner')
-
-        df_final['TimeSlot']= df_final['TimeSlot'].astype(str)
-
-        df_final = df_final.drop_duplicates()
     
-        df_final.to_csv(f'AnimeBoston_day{ii}_schedule.csv', index=False, encoding='utf-8-sig')
+        df_filtered.to_csv(f'AnimeBoston_day{ii}_schedule.csv', index=False, encoding='utf-8-sig')
 
 
 # --- run the main function ---

@@ -1,48 +1,52 @@
-﻿Event,Room,Category,Color,TimeSlot,Subevent
-A Puppet Without a Ghost: The Evolution of Cyberpunk Anime,"('Sheraton', 'Panel Constitution')",Guest Panel,#00FFFF,"['09:00', '09:15', '09:30', '09:45']",
-AMV Contest Overflow,"('Hynes', 'Fan Creations 312')",Fan Creations,#CCFF66,"['09:00', '09:15', '09:30', '09:45', '10:00', '10:15', '10:30', '10:45', '11:00', '11:15', '11:30', '11:45', '12:00', '12:15', '12:30', '12:45', '13:00', '13:15', '13:30', '13:45', '14:00', '14:15', '14:30', '14:45']",
-Anime Cons Then and Now,"('Hynes', 'Panel 208')",Guest Panel,#00FFFF,"['13:00', '13:15', '13:30', '13:45']",
-Anime Theme Bingo,"('Hynes', 'Panel 302')",Gameshow,#72B7ED,"['10:00', '10:15', '10:30', '10:45', '11:00', '11:15']",
-Ascendance of a bookworm,"('Hynes', 'Video 306')",Video,#66A3D2,"['08:00', '08:15', '08:30', '08:45', '09:00', '09:15', '09:30', '09:45']",
-BabyBeard Sunday Q&A,"('Sheraton', 'Panel Constitution')",Guest Panel,#00FFFF,"['13:30', '13:45', '14:00', '14:15']",
-Beyond Evangelion: The Career of Hideaki Anno,"('Hynes', 'Panel 207')",Fan Panel,#00FF00,"['11:00', '11:15', '11:30', '11:45']",
-Bootleg,"('Hynes', 'Panel 309')",Guest Panel,#00FFFF,"['11:00', '11:15', '11:30', '11:45']",
-Charity Auction,"('Sheraton', 'Grand Ballroom')",Event,#E8D37E,"['09:30', '09:45', '10:00', '10:15', '10:30', '10:45', '11:00', '11:15', '11:30', '11:45', '12:00', '12:15']",
-Closing Ceremonies,"('Hynes', 'Auditorium Events')",Event,#E8D37E,"['15:00', '15:15', '15:30', '15:45']",
-Cosplay Chess,"('Hynes', 'Auditorium Events')",Cosplay Games,#EEAEEE,"['11:00', '11:15', '11:30', '11:45', '12:00', '12:15', '12:30', '12:45']",
-Cosplay Runway,"('Hynes', 'Panel 302')",Cosplay Games,#EEAEEE,"['14:00', '14:15', '14:30', '14:45']",
-Cosplay is Not Consent,"('Hynes', 'Panel 208')",Featured Panel,#00FF99,"['11:30', '11:45', '12:00', '12:15']",
-Demon Slayer Gathering,"('Hynes', 'Ballroom A')",Social Gatherings,#FF3366,"['11:00', '11:15', '11:30', '11:45']",
-Embellishments Galore: A primer on embroidery and beading,"('Hynes', 'Panel 207')",Fan Panel,#00FF00,"['09:30', '09:45', '10:00', '10:15']",
-"Evenings with Isabelle - Combatting depression and anxiety with Animal Crossing, video games and fan","('Hynes', 'Panel 309')",Guest Panel,#00FFFF,"['12:30', '12:45', '13:00', '13:15']",
-Extreme Wig Styling: Live Demonstration,"('Sheraton', 'Workshop Fairfax')",Guest Panel,#00FFFF,"['12:30', '12:45', '13:00', '13:15']",
-Feedback Panel,"('Hynes', 'Panel 207')",Event,#E8D37E,"['16:00', '16:15', '16:30', '16:45']",
-Flowers of Evil: A History of Visual Kei,"('Hynes', 'Panel 310')",Fan Panel,#00FF00,"['09:00', '09:15', '09:30', '09:45']",
-Forged in Foam: Easy Effects for EVA Foam Projects,"('Sheraton', 'Workshop Fairfax')",Guest Panel,#00FFFF,"['14:00', '14:15', '14:30', '14:45']",
-Forgotten Forebears: Influential Games You Haven't Heard Of,"('Hynes', 'Panel 310')",Fan Panel,#00FF00,"['13:30', '13:45', '14:00', '14:15']",
-GOTH BOY EXTRAVAGANZA: THE GAVIS BETTEL AND BANZOIN HAKKA SHOW,"('Sheraton', 'Panel Constitution')",Event,#E8D37E,"['12:00', '12:15', '12:30', '12:45']",
-Giddy Dorai,"('Sheraton', 'Republic Ballroom')",Jam Zone,#CC0000,"['13:30', '13:45', '14:00', '14:15', '14:30', '14:45']",
-Gundam Building - Beginner,"('Sheraton', 'Panel The Fens')",Workshop,#F7931E,"['11:00', '11:15', '11:30', '11:45']",
-Gundam Building - Intermediate,"('Sheraton', 'Panel The Fens')",Workshop,#F7931E,"['12:30', '12:45', '13:00', '13:15']",
-Harlequin Manga : translating romance for Japanese readers,"('Sheraton', 'Panel Gardner')",Fan Panel,#00FF00,"['12:00', '12:15', '12:30', '12:45']",
-Hit The Stage: K-Pop Dance Contest,"('Hynes', 'Ballroom B')",Idol Events,#FF99CC,"['12:00', '12:15', '12:30', '12:45', '13:00', '13:15', '13:30', '13:45']",
-How Do You Say Atelier? A Starter Guide to Synthesis and Story,"('Hynes', 'Panel 207')",Fan Panel,#00FF00,"['12:30', '12:45', '13:00', '13:15']",
-How to Frankenstein a Pattern for Cosplay,"('Sheraton', 'Workshop Fairfax')",Fan Panel,#00FF00,"['09:30', '09:45', '10:00', '10:15']",
-Intro to Jirai Kei and Ryousangata Fashion,"('Sheraton', 'Panel Gardner')",Fan Panel,#00FF00,"['10:30', '10:45', '11:00', '11:15']",
-J-Fashion Show,"('Sheraton', 'Republic Ballroom')",Lolita & J-fashion,#CC6699,"['11:00', '11:15', '11:30', '11:45', '12:00', '12:15']",
-Lotus Juice Sunday Q&A,"('Hynes', 'Panel 207')",Guest Panel,#00FFFF,"['14:00', '14:15', '14:30', '14:45']",
-One Punch Man,"('Hynes', 'Video 210')",Video,#66A3D2,"['08:00', '08:15', '08:30', '08:45', '09:00', '09:15', '09:30', '09:45']",
-Origami: The Art of Paperfolding,"('Hynes', 'Panel 202')",Fan Panel,#00FF00,"['10:00', '10:15', '10:30', '10:45']",
-Pokemon Snap Scavenger Hunt,"('Hynes', 'Panel 202')",Gameshow,#72B7ED,"['13:00', '13:15', '13:30', '13:45', '14:00', '14:15', '14:30', '14:45']",
-Tabletop Session 3 - Dancing With the Demon Lord,"('Sheraton', 'RPG Riverway')",Tabletop Gaming,#CC0066,"['10:00', '10:15', '10:30', '10:45', '11:00', '11:15', '11:30', '11:45', '12:00', '12:15', '12:30', '12:45', '13:00', '13:15', '13:30', '13:45', '14:00', '14:15', '14:30', '14:45']",
-Taking the Stage! A Beginner's Guide to Idol Dance,"('Hynes', 'Panel 309')",Fan Panel,#00FF00,"['14:00', '14:15', '14:30', '14:45']",
-The History of Digimon in America,"('Sheraton', 'Panel Gardner')",Fan Panel,#00FF00,"['13:30', '13:45', '14:00', '14:15']",
-The World of Japanese Folk Tales,"('Hynes', 'Panel 309')",Fan Panel,#00FF00,"['09:00', '09:15', '09:30', '09:45', '10:00', '10:15']",
-Touhou Project: The Truth Behind the Yokai and Gods,"('Hynes', 'Panel 202')",Fan Panel,#00FF00,"['11:30', '11:45', '12:00', '12:15']",
-Western Animation Voice Acting and Anime Dubbing,"('Hynes', 'Panel 310')",Guest Panel,#00FFFF,"['12:00', '12:15', '12:30', '12:45']",
-Worldbuilding 101,"('Hynes', 'Panel 208')",Fan Panel,#00FF00,"['09:30', '09:45', '10:00', '10:15', '10:30', '10:45']",
-Yarn Cosplay,"('Hynes', 'Panel 310')",Fan Panel,#00FF00,"['10:30', '10:45', '11:00', '11:15']",
-Maid Café,"('Hynes', 'Maid Cafe')",Event,#E8D37E,"['12:00', '12:15', '12:30']",A
-Maid Café,"('Hynes', 'Maid Cafe')",Event,#E8D37E,"['12:45', '13:00', '13:15']",B
-Maid Café,"('Hynes', 'Maid Cafe')",Event,#E8D37E,"['13:30', '13:45', '14:00']",C
-Maid Café,"('Hynes', 'Maid Cafe')",Event,#E8D37E,"['14:15', '14:30', '14:45']",D
+﻿Event,Room,Category,Color,TimeSlot
+AMV Contest Overflow,"('Hynes', 'Fan Creations 312')",Fan Creations,#CCFF66,"['09:00', '09:15', '09:30', '09:45', '10:00', '10:15', '10:30', '10:45', '11:00', '11:15', '11:30', '11:45', '12:00', '12:15', '12:30', '12:45', '13:00', '13:15', '13:30', '13:45', '14:00', '14:15', '14:30', '14:45']"
+An Hour With Steve Blum,"('Sheraton', 'Panel Constitution A')",Panel,#72B7ED,"['12:00', '12:15', '12:30', '12:45']"
+"Armor, Swords, and - Lobsters? Explore the Craft of Japanese Metalwork","('Hynes', 'Panel 208')",Fan Content,#FF69B4,"['11:00', '11:15', '11:30', '11:45']"
+Break Your Brain: A history of psychological anime,"('Sheraton', 'Panel Constitution B')",Anime,#FFFF00,"['11:00', '11:15', '11:30', '11:45']"
+Charity Auction,"('Sheraton', 'Panel Republic')",Activity,#F7931E,"['09:30', '09:45', '10:00', '10:15', '10:30', '10:45', '11:00', '11:15', '11:30', '11:45', '12:00', '12:15']"
+Closing Ceremonies,"('Hynes', 'Memorial Auditorium')",Family Friendly,#A64FF7,"['15:00', '15:15', '15:30', '15:45']"
+Code Geass and why its themes remain relevant,"('Hynes', 'Events 302')",Panel,#72B7ED,"['09:00', '09:15', '09:30', '09:45']"
+Contemporary Literary Women of Japan,"('Sheraton', 'Panel Gardner')",Fan Content,#FF69B4,"['12:30', '12:45', '13:00', '13:15']"
+Convention Feedback,"('Hynes', 'Panel 207')",Panel,#72B7ED,"['16:00', '16:15', '16:30', '16:45']"
+Cosplay Armor 101,"('Hynes', 'Panel 208')",Cosplay,#CC99FF,"['12:30', '12:45', '13:00', '13:15']"
+Cosplay Runway,"('Hynes', 'Ballroom B')",Cosplay,#CC99FF,"['11:00', '11:15', '11:30', '11:45']"
+Cosplay Scavenger Hunt,"('Hynes', 'Panel 202')",Activity,#F7931E,"['13:00', '13:15', '13:30', '13:45', '14:00', '14:15', '14:30', '14:45']"
+Cosplay Singer,"('Hynes', 'Events 302')",Stage Show,#AFE1F1,"['14:00', '14:15', '14:30', '14:45']"
+Crowning Moments & Global Cosplay Competitions,"('Hynes', 'Panel 309')",Panel,#72B7ED,"['10:30', '10:45', '11:00', '11:15']"
+Culture of Change: Addressing Racism in Cosplay,"('Hynes', 'Panel 309')",Representation,#00FFFF,"['09:00', '09:15', '09:30', '09:45']"
+Death Note,"('Hynes', 'Video 210')",Video,#66A3D2,"['10:00', '10:15', '10:30', '10:45', '11:00', '11:15', '11:30', '11:45']"
+Demon Slayer Gathering,"('Hynes', 'Ballroom A')",Social Gatherings,#FF3366,"['10:30', '10:45', '11:00', '11:15']"
+Endangered Languages of Japan,"('Sheraton', 'Panel Gardner')",History,#CCFFCC,"['14:00', '14:15', '14:30', '14:45']"
+Food of the Occident: A History of Yōshoku and Foreign Policy,"('Sheraton', 'Panel Constitution A')",Fan Content,#FF69B4,"['09:00', '09:15', '09:30', '09:45']"
+Friends to Lovers: What Do These Tropes Even Mean,"('Hynes', 'Panel 202')",Anime,#FFFF00,"['11:00', '11:15', '11:30', '11:45']"
+From Black Butler to Twisted Wonderland: Inspiration and Magic,"('Hynes', 'Panel 310')",Anime,#FFFF00,"['12:30', '12:45', '13:00', '13:15']"
+From Gum to Gundam: Anime Funding Through History,"('Sheraton', 'Panel Constitution B')",Panel,#72B7ED,"['14:00', '14:15', '14:30', '14:45']"
+Gender Non-Conforming Men in Lolita Fashion,"('Hynes', 'Panel 202')",Fashion,#CC99FF,"['09:30', '09:45', '10:00', '10:15']"
+Goodnight Mr. Nook,"('Sheraton', 'Panel Constitution B')",Guest Content,#00FF00,"['12:30', '12:45', '13:00', '13:15']"
+Gundam Building - Beginner,"('Sheraton', 'Panel Gardner')",Partner Content|Workshop,#F7931E|#FF69B4,"['11:00', '11:15', '11:30', '11:45']"
+Idol Showcase,"('Hynes', 'Memorial Auditorium')",Family Friendly,#A64FF7,"['10:30', '10:45', '11:00', '11:15', '11:30', '11:45', '12:00', '12:15']"
+Itabag Show & Tell,"('Sheraton', 'Workshop Fairfax')",Family Friendly,#A64FF7,"['13:30', '13:45', '14:00', '14:15', '14:30', '14:45']"
+J-Fashion Swap Meet,"('Hynes', 'Ballroom A')",Fashion,#CC99FF,"['12:30', '12:45', '13:00', '13:15', '13:30', '13:45', '14:00', '14:15', '14:30', '14:45']"
+Killing Point! K-Pop Skit Contest,"('Hynes', 'Ballroom B')",Stage Show,#AFE1F1,"['13:30', '13:45', '14:00', '14:15', '14:30', '14:45']"
+Magnificiant Danger Concert,"('Sheraton', 'Grand Ballroom')",Concert,#AFE1F1,"['12:30', '12:45', '13:00', '13:15']"
+Make a Soot Sprite Keychain,"('Sheraton', 'Workshop Fairfax')",Workshop,#F7931E,"['11:00', '11:15', '11:30', '11:45', '12:00', '12:15', '12:30', '12:45']"
+Mythology of Final Fantasy,"('Sheraton', 'Panel Constitution A')",Fan Content,#FF69B4,"['13:30', '13:45', '14:00', '14:15']"
+Name That Anime Tune,"('Hynes', 'Panel 207')",Gameshow,#72B7ED,"['09:00', '09:15', '09:30', '09:45']"
+Plastic Love: A Crash Course To Anime Figures,"('Sheraton', 'Panel Gardner')",Panel,#72B7ED,"['09:30', '09:45', '10:00', '10:15']"
+Preserving and Documenting Anime Fandom History,"('Hynes', 'Panel 207')",Anime,#FFFF00,"['12:00', '12:15', '12:30', '12:45']"
+Princess Mononoke who Really was the Villain?,"('Hynes', 'Panel 310')",Panel,#72B7ED,"['14:00', '14:15', '14:30', '14:45']"
+Relationships and Identity: Witch From Mercury and The Tempest,"('Hynes', 'Panel 309')",Fan Content,#FF69B4,"['12:00', '12:15', '12:30', '12:45']"
+Reviewing Anime,"('Hynes', 'Panel 207')",Guest Content,#00FF00,"['10:30', '10:45', '11:00', '11:15']"
+Sailor Moon,"('Hynes', 'Video 210')",Family Friendly,#A64FF7,"['08:00', '08:15', '08:30', '08:45', '09:00', '09:15', '09:30', '09:45']"
+Sketchbook Swap,"('Sheraton', 'Workshop Fairfax')",Social Event|Workshop,#F7931E,"['09:30', '09:45', '10:00', '10:15', '10:30', '10:45']"
+The Con-Goer's Guide to a Happy Spine,"('Hynes', 'Ballroom A')",Fan Content,#FF69B4,"['09:30', '09:45', '10:00', '10:15']"
+The Making of Pokémon: The First Movie,"('Sheraton', 'Panel Constitution A')",Fan Content,#FF69B4,"['10:30', '10:45', '11:00', '11:15']"
+The Modern Arcade: Building Arcade Cabs Today!,"('Hynes', 'Panel 310')",Gaming,#FFCC00,"['11:00', '11:15', '11:30', '11:45']"
+The Real Life Pirates of One Piece,"('Hynes', 'Panel 309')",History,#CCFFCC,"['13:30', '13:45', '14:00', '14:15']"
+Utattemita 101: From Vocaloid to Tokyo Dome,"('Sheraton', 'Panel Constitution B')",Panel,#72B7ED,"['09:30', '09:45', '10:00', '10:15']"
+Voice Actor Roundtable,"('Hynes', 'Events 302')",Panel,#72B7ED,"['12:00', '12:15', '12:30', '12:45']"
+We're Still Here: Then & Now as a Transgender Anime Fan,"('Hynes', 'Panel 208')",Panel,#72B7ED,"['14:00', '14:15', '14:30', '14:45']"
+Where the Wild Pics Are: A Guide to On-Location Cosplay Photography,"('Hynes', 'Panel 207')",Cosplay,#CC99FF,"['13:30', '13:45', '14:00', '14:15']"
+Why All Cosplayers Should Try LARPing,"('Hynes', 'Events 302')",Cosplay,#CC99FF,"['10:30', '10:45', '11:00', '11:15']"
+Why Did You Come to Japan?,"('Hynes', 'Panel 310')",Panel,#72B7ED,"['09:30', '09:45', '10:00', '10:15']"
+Yume Nikki & the Wide World of Indie Horror,"('Hynes', 'Panel 208')",Fan Content,#FF69B4,"['09:30', '09:45', '10:00', '10:15']"
