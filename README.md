@@ -10,11 +10,13 @@ Solves the schedule as an assignment problem via LP
 ----
 ✅ What's done:
 - ✅ Completed the web scraping in a notebook that captures the data, processes it (including subevents like Maid Cafe going into 45-min block options), and tidies it.
-- ✅ Write a `webscrape.py` script for translating data engineering into a CSV (optionally: store timestamp when the script queries data).
+- ✅ Write a `WebScrape.py` script for translating data engineering into a CSV (optionally: store timestamp when the script queries data).
 - ✅ After the CSV is fully ready, manually utility score the information.
 
 🔜 What's next:
-- ☐ With the data prepped, write the LP model.
+- ☐ With the data prepped, write the LP mathematical model in the notebook.
 - ☐ After the LP model is defined, write the code.
-- ☐ Run and observe results in an itinerary.
-- ☐ Make refinements to the LP model.
+- ☐ Standardize code in `MathOptModel.py` and observe results in a displayed itinerary.
+- ☐ Make refinements to the LP model based on feedback from party members.
+- ☐ Circle actual schedules (+with backup events)
+- ☐ Finalize actual schedules with party (+with backup events)
