@@ -9,6 +9,7 @@ import requests
 # --- clean html tables ---
 def preprocess_tables(tables, ii, FirstColumnName='TimeSlot'):
     table_df = tables[ii]
+    
     table_df.dropna(subset=[table_df.columns[0]], inplace=True)
     table_df = table_df.iloc[:, :-1].copy()
     table_df.columns = [FirstColumnName] + table_df.columns[1:].tolist()
@@ -21,6 +22,9 @@ def preprocess_tables(tables, ii, FirstColumnName='TimeSlot'):
 
 # --- chunk events like Maid Cafe ---
 def split_event_to_subevents(df, event_col, time_col, room_col, chunk_size=3, target_event=None):
+    """
+    deprecated in 2025 most likely
+    """
     if target_event:
         df = df[df[event_col] == target_event]
 
@@ -53,9 +57,8 @@ def fetch_schedule_data(url):
 
 
     df_events = pd.DataFrame(events).drop_duplicates().sort_values(by='title')
-    df_events['title'] = df_events['title'].replace("", np.nan).fillna(df_events['title_table']).str.strip()
+    df_events['title'] = df_events['title'].replace("", np.nan).fillna(df_events['title_table']) #???
 
-    
     df_events['category_number'] = df_events['category_number'].astype(int)
 
     legend_items = soup.select("div.schedule-legend label.schedule-category-label")
@@ -75,7 +78,7 @@ def fetch_schedule_data(url):
 
     # ------- if we don't have anything for information
     df_categories['Utility'] = 0
-    df_categories.to_csv('Event_Categories.csv', index=False, encoding='utf-8-sig')
+    # df_categories.to_csv('Event_Categories.csv', index=False, encoding='utf-8-sig')
 
     df_all_events = pd.merge(df_events, df_categories,
                              left_on='category_number',
@@ -99,14 +102,17 @@ def process_event_table(url, all_events_df, table = 0):
     events_df.columns = events_df.columns.str.strip()
     all_events_df.columns = all_events_df.columns.str.strip()
 
+    # events_df.to_csv(f'eventsday_{table}.csv', index=False, encoding='utf-8-sig')
+
     merged_df = pd.merge(events_df, all_events_df,
                          left_on='Event',
-                         right_on='title_table',
-                         how='inner') \
+                         right_on='title_bestguess',
+                         how='left') \
                   .drop(columns=['Event']) \
-                  .rename(columns={'title': 'Event', 'title_table': 'Event_table'})
+                  .rename(columns={'title': 'Event'}) # careful on line above
 
-    grouped_df = merged_df.groupby(['Event', 'Room', 'Category', 'Color'])['TimeSlot'].agg(list).reset_index()
+    grouped_df = merged_df.groupby(['Event', 'Room', 'Category', 'Color', 'Utility_JW'])['TimeSlot'].agg(list).reset_index()
+
     return grouped_df
 
 
@@ -114,8 +120,11 @@ def process_event_table(url, all_events_df, table = 0):
 def main():
     url = "https://www.animeboston.com/schedule/index/2025"
 
-    all_events_df, category_colors_df = fetch_schedule_data(url)
+    _,_ = fetch_schedule_data(url) # all_events_df, category_colors_df
+    # These were used for a first pass, but afterwards, the table titles were quite dirty, so I had to scrub and tidy manually to match between days and all events
 
+    all_events_df = pd.read_excel('0_all_events.xlsx')
+    
     for ii in range(0,3):
         grouped_df = process_event_table(url, all_events_df, table = ii)
     
@@ -126,6 +135,7 @@ def main():
         final_df = pd.concat([grouped_df, subevent_df], ignore_index=True)
     
         # exclude non-schedulable items
+        # Considering using anything with a utility of 0.0 as this
         exclude_from_scheduling = [
             "Room Clear", "Seating", "ID Check Seating (18+)"
         ]
@@ -139,7 +149,7 @@ def main():
         df_notslot = df_filtered.drop(columns=['TimeSlot'])
         
         # group without slot
-        df_grouped = df_notslot.groupby(['Event', 'Room'], as_index=False).agg({
+        df_grouped = df_notslot.groupby(['Event', 'Room', 'Utility_JW'], as_index=False).agg({
             'Category': lambda x: '|'.join(sorted(set(x))),
             'Color': lambda x: '|'.join(sorted(set(x)))
         })
